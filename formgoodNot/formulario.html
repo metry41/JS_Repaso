@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Formulario</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Stefan">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="image/favicon1.png" sizes="600x600">
+    <link href="formulario.css" rel="stylesheet">
+    
+    
+<!--<script>
+    function checkPass()
+{
+    var pass1 = document.getElementById('pass');
+    var pass2 = document.getElementById('rpass');
+    var message = document.getElementById('confMessage');
+    if(pass1.value == pass2.value){
+        pass2.classList.add("goodcolor2")
+        message.innerHTML = "" 
+    }else{
+
+        pass2.classList.add("badcolor");
+        message.innerHTML = "Las contraseñas no coinciden"
+    }
+}  
+</script>-->
+</head>
+
+<body>
+    <header>
+        <h1>Formulario</h1>
+    </header>
+    <article>
+        <form  method="post" name="formBlue" id="formBlue">
+
+            <fieldset>
+                <legend>Datos del alumno</legend>
+                <div id="izq">
+                    <fieldset>
+                        <legend>Identificacion</legend>
+                        <div class="label">
+                            <label for="email">Cuenta de correo</label> <br>
+                            <label for="pass">Introduzca su clave de acceso</label> <br>
+                            <label for="rpass">Repita la clave de acceso</label> <br>
+
+                        </div>
+
+                        <div class="input">
+                            <input type="email" name="email" id="email" size="30" maxlength="100" placeholder="cuenta@dominio.com" required>
+                            <input type="password" name="pass" id="pass" size="20" maxlength="100" placeholder="MAY, min y num"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                                required>
+                            <input type="password" name="rpass" id="rpass" size="20" maxlength="100" placeholder="MAY, min y num" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                                 required>
+                            <p id="confMessage"></p>
+                           
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Curso</legend>
+                        <div id="ci">
+                            <input type="radio" name="category" value="web" onClick="oFormulario.doIt(this.value);" >Programador web<br><br>
+                            <input type="radio" name="category" value="sist" onClick="oFormulario.doIt(this.value);">Programador de Sistemas<br><br>
+                            <input type="radio" name="category" value="obj" onClick="oFormulario.doIt(this.value);" >Programador de Objetos<br><br>
+                            <input type="radio" name="category" value="nada" onClick="oFormulario.doIt(this.value);" checked>Selecciona un curso<br>
+                         
+                          
+
+                        </div>
+                        <div id="cd">
+                            <select id="sCurso"  class="oculto" size="4">
+                       
+                </select>
+
+                        </div>
+
+
+                    </fieldset>
+
+                    <fieldset>
+                        <input type="submit" name="send" id="submit" value="Enviar datos">
+                        <input type="reset" name="del" value="Restablecer valores">
+                    </fieldset>
+
+
+                </div>
+                <div id="dcha">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+
+                        <div class="label">
+                            <label for="name">Nombre</label> <br>
+                            <label for="sname">Primer apellido</label> <br>
+                            <label for="s2name">Segundo apellido</label> <br>
+
+                        </div>
+
+                        <div class="input">
+                            <input type="text" name="name" id="name" size="30" maxlength="100" required>
+                            <input type="text" name="sname" id="sname" size="30" maxlength="100" required>
+                            <input type="text" name="s2name" id="s2name" size="30" maxlength="100" required>
+                            <input type="" name="" class="oculto" id="" size="" maxlength="" required>
+                        </div>
+                        <fieldset>
+                            <legend>Fecha de nacimiento</legend>
+                            <input type="date" id="date">
+                        </fieldset>
+
+
+                    </fieldset>
+                    <fieldset id="checkBox">
+                        <legend>Aficiones</legend>
+                        <div class="aficiones">
+                            <input type="checkbox" name="aficion" value="musica"> Musica<br>
+                            <input type="checkbox" name="aficion" value="viajar"> Viajar<br>
+
+                        </div>
+                        <div class="aficiones">
+                            <input type="checkbox" name="aficion" value="pintura"> Pintura<br>
+                            <input type="checkbox" name="aficion" value="fotografia"> Fotografia<br>
+                        </div>
+                        <div class="aficiones">
+                            <input type="checkbox" name="aficion" value="cine"> Cine<br>
+                            <input type="checkbox" name="aficion" value="lectura"> Lectura<br>
+
+                        </div>
+                        <div class="aficiones">
+                            <input type="checkbox" name="aficion" value="deporte"> Deporte<br>
+                            <input type="checkbox" name="aficion" value="baile"> Baile<br>
+                        </div>
+                    </fieldset>
+                    <fieldset id="systemDate">
+                    </fieldset>
+                </div>
+
+            </fieldset>
+        </form>
+        <div id="respuesta" class="oculto">
+            <h2>Los datos del usuario son los siguientes</h2>
+            <ul id="start"> </ul>
+        </div>
+    </article>
+
+    <footer>
+        <p>Made by Stefan Catalin Cretu ©2017</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

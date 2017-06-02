@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <title>Ejercicio 16</title>
+        <meta name="author" content="Álvaro">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <!-- ********** icona **********  -->
+        <link rel="shortcut icon" href="icona.ico">
+        <!-- ********** CSS ********** -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- ********** JQuery ********** -->
+        <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
+        <!-- ********** JavaScript ********** -->
+        <script type="text/javascript" src="js/main.js"></script>
+        
+        
+    </head>
+    <body>
+        
+        <form id="form">
+
+            <!-- inicio fieldset wrap -->    
+            <fieldset>
+            <legend>Datos del alumno</legend>
+            <!-- los fieldset no pueden ser flex, se puede utilizar otro div -->
+            <div  class="wrap">                  
+
+                <!-- inicio primera columna -->
+                <div class="columnas">
+                
+                    <fieldset>
+                        <legend>Identificaciòn</legend>
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo" required="required"><span>*</span>
+
+                        <br><br>
+
+                        <label for="pw">Password</label>
+                        <input type="password" name="pw" id="pw" required><span>*</span>
+                        
+                        <br><br>
+
+                        <label for="pw2">Password</label>
+                        <input type="password" name="pw2" id="pw2" required><span>*</span>
+
+                        <br><br>
+
+                        <div id="compare">
+
+                        </div>
+
+                    </fieldset><!-- fin identificaciòn -->
+                
+                    <fieldset>
+                        
+                        <!-- type="button" no utiliza las convalidaciones html (required, etc) -->
+                        <button type="submit" id="btnSend">Enviar</button>
+                        <button type="reset" id="btnReset">Restablecer los datos</button>
+
+                    </fieldset><!-- fin botones -->
+                </div> <!-- fin primera columna -->
+
+                <!-- inicio segunda columna -->
+                <div class="columnas">
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" required><span>*</span>
+
+                        <br><br>
+
+                        <label for="apellido">Primer apellido</label>
+                        <input type="text" name="apellido" id="apellido" required><span>*</span>
+
+                        <br><br>
+
+                        <label for="apellido2">Segundo apellidos</label>
+                        <input type="text" name="apellido2" id="apellido2">
+
+                        <fieldset>
+                            <label for="day">Dia</label>
+                            <input type="number" name="day" id="day" size="2">
+                            <label for="month">Més</label>
+                            <input type="number" name="month" id="month" size="2">
+                            <label for="year">Año</label>
+                            <input type="number" name="year" id="year" size="4">
+
+                            <br><br>
+
+                            <!-- si la fecha es invalida lo escribe aqui -->
+                            <div id="invalidDate">
+                            </div>
+
+                        </fieldset><!-- fin fecha -->
+
+                    </fieldset><!-- fin Datos Personales -->
+
+                    <fieldset>
+
+                        <legend>Aficiònes</legend>
+                        <input type="checkbox" name="Musica"> Musica
+                        <input type="checkbox" name="Viajar"> Viajar
+                        <input type="checkbox" name="Pintura"> Pintura
+                        <input type="checkbox" name="Fotografia"> Fotografia
+
+                        <br>
+
+                        <input type="checkbox" name="Cine"> Cine
+                        <input type="checkbox" name="Lectura"> Lectura
+                        <input type="checkbox" name="Deporte"> Deporte
+                        <input type="checkbox" name="Baile"> Baile
+
+                    </fieldset><!-- fin aficiones -->
+
+                    <fieldset>
+                        <p id="date">
+                        </p>
+                    </fieldset><!-- fin fecha -->
+                </div><!-- fin segunda columna -->
+
+            </div>
+            </fieldset><!-- fin fieldset wrap -->
+
+            <p>*requerido</p>
+
+        </form>
+
+        <!-- siìmulacciòn datos enviados -->
+        <div id="resultado" class="hidden">
+            <h2>Sus datos son:</h2>
+            <ul class="lista">
+
+            </ul>
+        </div>
+        
+        
+    </body>
+    
+</html>
