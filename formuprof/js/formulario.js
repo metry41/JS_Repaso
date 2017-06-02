@@ -3,6 +3,7 @@ class Formulario {
     constructor () {
         this.oDatos = {"Nombre": "",
                     "Apellidos": "",
+                    "Correo": "",
                     "Password": "",
                     "Password2": "",
                     "Comentarios": "",
@@ -34,6 +35,7 @@ class Formulario {
     recogeDatos (oE) {
         this.oDatos.Nombre = document.querySelector("#inputName").value;
         this.oDatos.Apellidos = document.querySelector("#inputApell").value;
+        this.oDatos.Correo = document.querySelector("#inputMail").value;        
         this.oDatos.Password = document.querySelector("#inputPasswd").value;
         this.oDatos.Password2 = document.querySelector("#inputPasswd2").value;
         this.oDatos.Comentarios = document.querySelector("#coment").value;
