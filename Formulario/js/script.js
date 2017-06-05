@@ -20,8 +20,19 @@ class Formulario {
             sist: ["HTML", "css", "JavaScript", "PHP"],
             obj: ["HTML", "css", "JavaScript", "PHP"]
             }
-    }
 
+        /*this.oEnviar = document.getElementById("enviar")
+
+        this.oEnviar.addEventListener("click",
+        this.escribeTexto.bind(this));
+
+
+
+        this.oForm = document.getElementById("formulario")
+
+        this.oForm.addEventListener("submit",
+            this.simulaEnvio.bind(this));*/
+    }
 
     apareceDesplegable (value) {
         switch (value) {
@@ -129,6 +140,7 @@ class Formulario {
         this.oForm.onsubmit = this.comprobar();
         this.oContraseña2.oninput=this.comparar();
     }
+    
 }
 
 
