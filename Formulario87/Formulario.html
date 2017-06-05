@@ -28,12 +28,11 @@
                             <label for="correo">Cuenta de correo.....</label>
                             <input type="email" name="correo" id="correo" size="50" maxlength="80" placeholder="micuenta@dominio.com " required>
                             <hr>
-                            <label for="cont" title="Debe incluir al menos 9 caracteres alfanumericos ">Introduzca su clave de acceso.....</label>
-                            <input type="password" name="cont" id="cont" size="35" maxlength="14" required>
-                            <p>* Debe incluir de 9 a 14 caracteres, letras mayúsculas y minúsculas y, al menos, un número </p>
-                            <label for="cont2 " title="Debe incluir al menos 9 caracteres alfanumericos ">Repita la clave de acceso.....</label>
-                            <!-- pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{9,14}$ " -->
-                            <input type="password" name="cont2" id="cont2" size="35" maxlength="14" required>
+                            <label for="cont" title="Debe incluir al menos 6 caracteres alfanumericos ">Introduzca su clave de acceso.....</label>
+                            <input type="password" name="cont" id="cont" size="35" maxlength="14" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                            <p>* Debe incluir al menos 6 caracteres, letras mayúsculas y minúsculas y, al menos, un número o carácter especial. </p>
+                            <label for="cont2 " title="Debe incluir al menos 6 caracteres alfanumericos ">Repita la clave de acceso.....</label>
+                            <input type="password" name="cont2" id="cont2" size="35" maxlength="14" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                             <hr>
 
                         </div>
@@ -56,16 +55,16 @@
 
                             <fieldset>
                                 <legend>Fecha de nacimiento</legend>
-                                <input type="date" name="fecha" id="fecha">
+                                <input type="date" name="fecha" id="fecha" required>
                             </fieldset>
 
                         </div>
 
                         <fieldset id="direccion">
                             <legend> Dirección </legend>
-                            <p>Domicilio: <input type="text" name="domic" id="domic" size="50" maxlength="100"> </p>
-                            <p>Ciudad: <input type="text" name="ciudad" id="ciudad" size="50" maxlength="100"> </p>
-                            <p>Código Postal: <input type="text" name="cp" id="cp" size="20" maxlength="8 " pattern="^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$"></p>
+                            <p>Domicilio <input type="text" name="domic" id="domic" size="50" maxlength="100" required> </p>
+                            <p>Ciudad <input type="text" name="ciudad" id="ciudad" size="50" maxlength="100" required> </p>
+                            <p>Código Postal <input type="text" name="cp" id="cp" size="20" maxlength="8 " pattern="^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$" required></p>
                         </fieldset>
 
                         <fieldset id="aficiones">
@@ -115,13 +114,13 @@
             <fieldset>
                 <legend> Comentarios </legend>
 
-                <textarea rows="8" cols="120" placeholder="Escribe aquí" id="coment"></textarea>
+                <textarea rows="8" cols="120" placeholder="Escribe aquí..." id="coment"></textarea>
 
             </fieldset>
 
             <fieldset>
                 <p id="condicion">
-                    Por favor, acepta las condiciones del curso : <br>
+                    Por favor, lee detenidamente y acepta las condiciones del curso : <br>
                     <a href="http://www.madrid.org/ " target="_blank ">Consulta las condiciones aquí </a> <br>
                     <input class="post" type="checkbox" name="condiciones" required>
                     <label>Acepto las condiciones y reglas del curso de informática</label>

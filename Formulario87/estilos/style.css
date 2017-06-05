@@ -13,10 +13,18 @@ header {
     background-color: steelblue;
     text-align: center;
     border-radius: 0.8em;
+    padding: 0.1em;
+    margin-bottom: 1.5em;
 }
 
 form {
     background-color: steelblue;
+    color: white;
+    padding: 0.1em;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 legend {
@@ -30,18 +38,15 @@ fieldset {
 
 div#identif {
     width: 100%;
-    color: white;
 }
 
 div#personal {
     width: 100%;
-    color: white;
 }
 
 div#otros {
     width: 50%;
     float: right;
-    color: white;
 }
 
 label {
@@ -97,7 +102,17 @@ div.seleccion {
     background-color: white;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    border-width: 1em;
+    border-style: solid;
     padding: 3%;
+}
+
+li:nth-child(2n) {
+    background-color: gainsboro;
+}
+
+li:nth-child(2n+1) {
+    background-color: silver;
 }
 
 footer {
