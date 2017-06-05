@@ -31,8 +31,14 @@ class Formulario {
         this.oForm = document.getElementById("formulario")
 
         this.oForm.addEventListener("submit",
-            this.simulaEnvio.bind(this));*/
+        this.simulaEnvio.bind(this));*/
+
     }
+
+    /*simulaEnvio(oE) {
+            oE.preventDefault();
+            this.pintaRespuesta()
+        }*/
 
     apareceDesplegable (value) {
         switch (value) {
@@ -118,7 +124,7 @@ class Formulario {
     decirPass(x) {
         var msgs = "";
         if (!x) {
-            msgs = "Las contraseñas no coinciden"
+            msgs = "Revise las contraseñas"
             this.oContraseña.focus();
 
         } else {
@@ -129,8 +135,8 @@ class Formulario {
     pintaRespuesta() {
         this.oForm.className = "oculto";
         document.querySelector("#respuesta").className = "visto";
-        for (var i = 0; i < this.fSalida.length; i++) {
-            this.oParrafo.innerHTML += `<li> ${this.fSalida[i].etiqueta} :  <span>${this.fSalida[i].valor}</span></li><hr> `
+        for (var i = 0; i < this.oDatos.length; i++) {
+            this.oParrafo.innerHTML += `<li> ${this.oDatos[i].etiqueta} :  <span>${this.oDatos[i].valor}</span></li><hr> `
         }
     }
     pasaDatos() {
@@ -144,12 +150,12 @@ class Formulario {
 }
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", function (q) {
     oFormulario = new Formulario
     q.preventDefault();
-    document.getElementById("enviar").onclick = oFormulario.pasaDatos.bind(oFormulario)
-    oFormulario.fecha()
+    document.querySelector("#enviar").onclick = oFormulario.pasaDatos.bind(oFormulario);
+    oFormulario.fecha();
 }, false);
+
+
+
