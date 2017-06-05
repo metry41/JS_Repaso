@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+* {box-sizing: border-box;}
+ body{
+     margin: 0px auto 1.5em auto;
+     background-color: honeydew;
+     color:beige
+     }
+ h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+     font-size: 4em;
+   text-shadow: 3px 2px 4px black;
+     color: blueviolet;
+     font-weight: 5px;
+     margin: 0px auto;
+     background-color: cyan;
+     text-align: center;
+ }
+ h2{
+    font-size: 2em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-shadow: 3px 2px 4px black;
+    color: #e0e0e0;
+    background-color: aqua;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+ } 
+ ul{ padding: 2em 1em 0px 1em;
+     background-color: #e1f5fe;
+     margin: 4px 0px 0px 0px;
+     list-style: none;
+     padding: 20px 0px 55px 0px;
+ }
+ li{
+    font-size: 1.2em;
+    margin-left: 2em;
+    color: #212121;
+ }
+ hr{
+     margin:2px 0px 0px 0px;
+ }
+ li>span{
+     color:black;
+     font-family: 'Open Sans Condensed', sans-serif;
+     font-size: 1em;
+ }
+  footer{
+     background-color:cornsilk;
+     text-align: center;
+     height: 7%;
+     width: 100%;
+     color: blue;
+     position: fixed;
+     bottom: 0px;
+ }
+ .oculto {display: none}
+ .visto {display: block}
+ form{
+     background-color: steelblue;
+     width: 80%;
+      margin: 2em auto;
+ }
+ legend{
+     background-color: navy;
+     color: white;
+ } 
+ fieldset{
+     margin: 1em;
+     padding: 1em;
+ }
+ div.label{
+     width: 50%;
+     float: left;
+     color: white;
+ } 
+ #izq{
+     width: 50%;
+     float: left;
+     color: white;
+     
+ } 
+ #dcha{
+     width: 50%;
+     float: left;
+     color: white;
+ }
+ div#radiobuttons{
+     width: 60%;
+     float: left
+ }
+  div#cur{
+     width: 40%;
+     float: left
+ }
+ div.aficiones{
+     width: 25%;
+     float: left;
+ }
+ div.aficiones>input{
+     margin-bottom: 1em;
+ }
+ #respuesta{
+     width: 50%;
+     border: 1px solid black;
+     margin: 4em auto;
+     box-shadow: 2px 3px 4px #b3e5fc;
+ }

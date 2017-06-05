@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin: 2em auto;
+    background-color: silver;
+    background-image: url(../images/back2.jpg);
+}
+
+header {
+    background-color: steelblue;
+    text-align: center;
+    border-radius: 0.8em;
+}
+
+form {
+    background-color: steelblue;
+}
+
+legend {
+    background-color: navy;
+    color: white;
+}
+
+fieldset {
+    margin: 1%;
+}
+
+div#identif {
+    width: 100%;
+    color: white;
+}
+
+div#personal {
+    width: 100%;
+    color: white;
+}
+
+div#otros {
+    width: 50%;
+    float: right;
+    color: white;
+}
+
+label {
+    line-height: 200%
+}
+
+#nombfec {
+    width: 45%;
+    float: left;
+}
+
+#direccion {
+    width: 45%;
+    float: right;
+}
+
+#aficiones {
+    width: 45%;
+    float: right;
+}
+
+div#radioboton {
+    width: 70%;
+    float: left
+}
+
+.cursos {
+    float: left;
+    width: 30%
+}
+
+#especialidades {
+    float: left;
+    margin-top: 2em;
+}
+
+div.seleccion {
+    width: 30%;
+    float: left
+}
+
+#date {
+    width: 35%;
+    float: right;
+}
+
+#condicion {
+    width: 60%;
+    float: left;
+}
+
+#resultado {
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 3%;
+}
+
+footer {
+    background-color: slategrey;
+    text-align: center;
+    font-family: cursive;
+}
+
+.oculto {
+    display: none
+}

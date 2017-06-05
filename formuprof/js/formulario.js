@@ -11,7 +11,7 @@ class Formulario {
                     "Curso" : ""
             };
         this.oParrafo = document.querySelector("#listaDatos");
-        // referencia del pÃ¡rrafo donde escribir
+        // referencia del parrafo donde escribir
         this.oBtnEnviar = document.querySelector("#btnSubmit")
         this.oForm = document.querySelector("#form_1")
 
@@ -41,7 +41,7 @@ class Formulario {
         this.oDatos.Comentarios = document.querySelector("#coment").value;
         this.oDatos.Tema = document.querySelector("#selectTema").value;
         this.oDatos.Curso = document.querySelector("#selectCurso").value;
-    } //Fin del mÃ©todo recogeDatos
+    } //Fin del metodo recogeDatos
 
 
     escribeDatos () {
@@ -54,6 +54,6 @@ class Formulario {
             this.oParrafo.innerHTML += "<li>" + i + ": <strong>" +
                 this.oDatos[i] + "</strong></li>";
         };
-    } //Fin del mÃ©todo escribedatos	
+    } //Fin del metodo escribedatos	
 
 } // Fin de la clase Formulario
